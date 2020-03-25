@@ -1,0 +1,566 @@
+{
+  "contractName": "Counter",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Matt Condon (@shrugs)\",\"details\":\"Provides an incrementing uint256 id acquired by the `Counter#next` getter. Use this for issuing ERC721 ids or keeping track of request ids, anything you want, really. * Include with `using Counter for Counter.Counter;`\",\"methods\":{},\"title\":\"Counter\"},\"userdoc\":{\"methods\":{},\"notice\":\"Does not allow an Id of 0, which is popularly used to signify a null state in solidity. Does not protect from overflows, but if you have 2^256 ids, you have other problems. (But actually, it's generally impossible to increment a counter this many times, energy wise so it's not something you have to worry about.)\"}},\"settings\":{\"compilationTarget\":{\"/home/user/Desktop/nft-auction-dapp/contracts/openzeppelin-solidity/contracts/drafts/Counter.sol\":\"Counter\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/user/Desktop/nft-auction-dapp/contracts/openzeppelin-solidity/contracts/drafts/Counter.sol\":{\"keccak256\":\"0x63b1da83494b9bf7c7052559cd713e9acf9e57db006b8499182a31728f0bc47e\",\"urls\":[\"bzz-raw://aee516d33e7bb921443ca20121dacc7f9ece2de0d26619c291b76b0d65d5c19e\",\"dweb:/ipfs/QmZnwq1kTrDfSFq4RrsjfpmtXfxALzgkSpijKSXTnHEn8G\"]}},\"version\":1}",
+  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723158201523bd6cc11edfbb12f67abf5859fae97bf484705d171a8a58c3048508d2e52464736f6c634300050b0032",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723158201523bd6cc11edfbb12f67abf5859fae97bf484705d171a8a58c3048508d2e52464736f6c634300050b0032",
+  "sourceMap": "652:220:97:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "652:220:97:-;;;;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\n/**\n * @title Counter\n * @author Matt Condon (@shrugs)\n * @dev Provides an incrementing uint256 id acquired by the `Counter#next` getter.\n * Use this for issuing ERC721 ids or keeping track of request ids, anything you want, really.\n *\n * Include with `using Counter for Counter.Counter;`\n * @notice Does not allow an Id of 0, which is popularly used to signify a null state in solidity.\n * Does not protect from overflows, but if you have 2^256 ids, you have other problems.\n * (But actually, it's generally impossible to increment a counter this many times, energy wise\n * so it's not something you have to worry about.)\n */\nlibrary Counter {\n    struct Counter {\n        uint256 current; // default: 0\n    }\n\n    function next(Counter storage index) internal returns (uint256) {\n        index.current += 1;\n        return index.current;\n    }\n}\n",
+  "sourcePath": "/home/user/Desktop/nft-auction-dapp/contracts/openzeppelin-solidity/contracts/drafts/Counter.sol",
+  "ast": {
+    "absolutePath": "/home/user/Desktop/nft-auction-dapp/contracts/openzeppelin-solidity/contracts/drafts/Counter.sol",
+    "exportedSymbols": {
+      "Counter": [
+        10877
+      ]
+    },
+    "id": 10878,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10856,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:97"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": "@title Counter\n@author Matt Condon (@shrugs)\n@dev Provides an incrementing uint256 id acquired by the `Counter#next` getter.\nUse this for issuing ERC721 ids or keeping track of request ids, anything you want, really.\n * Include with `using Counter for Counter.Counter;`\n@notice Does not allow an Id of 0, which is popularly used to signify a null state in solidity.\nDoes not protect from overflows, but if you have 2^256 ids, you have other problems.\n(But actually, it's generally impossible to increment a counter this many times, energy wise\nso it's not something you have to worry about.)",
+        "fullyImplemented": true,
+        "id": 10877,
+        "linearizedBaseContracts": [
+          10877
+        ],
+        "name": "Counter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Counter.Counter",
+            "id": 10859,
+            "members": [
+              {
+                "constant": false,
+                "id": 10858,
+                "name": "current",
+                "nodeType": "VariableDeclaration",
+                "scope": 10859,
+                "src": "699:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 10857,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "699:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Counter",
+            "nodeType": "StructDefinition",
+            "scope": 10877,
+            "src": "674:61:97",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10875,
+              "nodeType": "Block",
+              "src": "805:65:97",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10870,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10866,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10861,
+                        "src": "815:5:97",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$10859_storage_ptr",
+                          "typeString": "struct Counter.Counter storage pointer"
+                        }
+                      },
+                      "id": 10868,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "current",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10858,
+                      "src": "815:13:97",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 10869,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "832:1:97",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "815:18:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 10871,
+                  "nodeType": "ExpressionStatement",
+                  "src": "815:18:97"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 10872,
+                      "name": "index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10861,
+                      "src": "850:5:97",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Counter_$10859_storage_ptr",
+                        "typeString": "struct Counter.Counter storage pointer"
+                      }
+                    },
+                    "id": 10873,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "current",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 10858,
+                    "src": "850:13:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 10865,
+                  "id": 10874,
+                  "nodeType": "Return",
+                  "src": "843:20:97"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10876,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "next",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10862,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10861,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10876,
+                  "src": "755:21:97",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Counter_$10859_storage_ptr",
+                    "typeString": "struct Counter.Counter"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 10860,
+                    "name": "Counter",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 10859,
+                    "src": "755:7:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Counter_$10859_storage_ptr",
+                      "typeString": "struct Counter.Counter"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "754:23:97"
+            },
+            "returnParameters": {
+              "id": 10865,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10864,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10876,
+                  "src": "796:7:97",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10863,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "796:7:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "795:9:97"
+            },
+            "scope": 10877,
+            "src": "741:129:97",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 10878,
+        "src": "652:220:97"
+      }
+    ],
+    "src": "0:873:97"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/user/Desktop/nft-auction-dapp/contracts/openzeppelin-solidity/contracts/drafts/Counter.sol",
+    "exportedSymbols": {
+      "Counter": [
+        10877
+      ]
+    },
+    "id": 10878,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10856,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:97"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": "@title Counter\n@author Matt Condon (@shrugs)\n@dev Provides an incrementing uint256 id acquired by the `Counter#next` getter.\nUse this for issuing ERC721 ids or keeping track of request ids, anything you want, really.\n * Include with `using Counter for Counter.Counter;`\n@notice Does not allow an Id of 0, which is popularly used to signify a null state in solidity.\nDoes not protect from overflows, but if you have 2^256 ids, you have other problems.\n(But actually, it's generally impossible to increment a counter this many times, energy wise\nso it's not something you have to worry about.)",
+        "fullyImplemented": true,
+        "id": 10877,
+        "linearizedBaseContracts": [
+          10877
+        ],
+        "name": "Counter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Counter.Counter",
+            "id": 10859,
+            "members": [
+              {
+                "constant": false,
+                "id": 10858,
+                "name": "current",
+                "nodeType": "VariableDeclaration",
+                "scope": 10859,
+                "src": "699:15:97",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 10857,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "699:7:97",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Counter",
+            "nodeType": "StructDefinition",
+            "scope": 10877,
+            "src": "674:61:97",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10875,
+              "nodeType": "Block",
+              "src": "805:65:97",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10870,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10866,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10861,
+                        "src": "815:5:97",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$10859_storage_ptr",
+                          "typeString": "struct Counter.Counter storage pointer"
+                        }
+                      },
+                      "id": 10868,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "current",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10858,
+                      "src": "815:13:97",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 10869,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "832:1:97",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "815:18:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 10871,
+                  "nodeType": "ExpressionStatement",
+                  "src": "815:18:97"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 10872,
+                      "name": "index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10861,
+                      "src": "850:5:97",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Counter_$10859_storage_ptr",
+                        "typeString": "struct Counter.Counter storage pointer"
+                      }
+                    },
+                    "id": 10873,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "current",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 10858,
+                    "src": "850:13:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 10865,
+                  "id": 10874,
+                  "nodeType": "Return",
+                  "src": "843:20:97"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10876,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "next",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10862,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10861,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10876,
+                  "src": "755:21:97",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Counter_$10859_storage_ptr",
+                    "typeString": "struct Counter.Counter"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 10860,
+                    "name": "Counter",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 10859,
+                    "src": "755:7:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Counter_$10859_storage_ptr",
+                      "typeString": "struct Counter.Counter"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "754:23:97"
+            },
+            "returnParameters": {
+              "id": 10865,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10864,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10876,
+                  "src": "796:7:97",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10863,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "796:7:97",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "795:9:97"
+            },
+            "scope": 10877,
+            "src": "741:129:97",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 10878,
+        "src": "652:220:97"
+      }
+    ],
+    "src": "0:873:97"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.11+commit.c082d0b4.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.18",
+  "updatedAt": "2020-01-10T13:46:25.121Z",
+  "devdoc": {
+    "author": "Matt Condon (@shrugs)",
+    "details": "Provides an incrementing uint256 id acquired by the `Counter#next` getter. Use this for issuing ERC721 ids or keeping track of request ids, anything you want, really. * Include with `using Counter for Counter.Counter;`",
+    "methods": {},
+    "title": "Counter"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Does not allow an Id of 0, which is popularly used to signify a null state in solidity. Does not protect from overflows, but if you have 2^256 ids, you have other problems. (But actually, it's generally impossible to increment a counter this many times, energy wise so it's not something you have to worry about.)"
+  }
+}
